@@ -143,7 +143,7 @@ var game = {
         panel.append('<br><button id="start-over">Start Over?</button>');
     },
     clicked: function (e) {
-        clearIntepanelrval(timer);
+        clearInterval(timer);
 
         if ($(e.target).data("name") === triviaQuestion[this.currentQuestion].correctAnswer) {
             this.answeredCorrectly();
