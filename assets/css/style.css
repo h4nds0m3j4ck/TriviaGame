@@ -8,17 +8,16 @@ html, body{
   
   }
   
-  /*#wrapper{
-    margin:2.5% auto;
-    background-color:lightseagreen;
-    opacity: .4;
+  #wrap{
+    margin:15% auto;
     width:960px;
     height: 95%;
-    box-sizing: border-box;
-  }*/
+
+  }
   
-  #subwrapper{
+  #subwrap{
     position: relative;
+
   }
   button{
     display:block;
@@ -29,6 +28,7 @@ html, body{
     cursor: pointer;
     background:transparent;
     font-size: 42px;;
+    color: white;
   }
   
   img{
@@ -52,6 +52,7 @@ html, body{
   h3{
     font-size: 25px;
     margin-bottom: 10px;
+    color: aqua;
     
   }
   
@@ -68,4 +69,5 @@ html, body{
   button:hover {
     border:2px solid aquamarine;
     background: gray;
+    color: black
   }

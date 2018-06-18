@@ -49,7 +49,7 @@ var triviaQuestion = [{
     question: "What colored Chocobo can cross land, water, and mountains?",
     choices: ["Yellow", "Blue", "Gold", "White"],
     images: [],
-    validAnswer: "Gold"
+    correctAnswer: "Gold"
 
 }, {
     question: "*SPOILER* (If you haven't played this game yet... all I can say is wow) Whose death impacted the game at the end of disc 1?",
@@ -83,7 +83,7 @@ $(document).on('click', '.answer-button', function (e) {
 });
 
 $(document).on('click', '#start', function (e) {
-    $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter-number">30</span> Seconds</h2>');
+    $('#subwrap').prepend('<h2>Time Remaining: <span id="counter-number">30</span> Seconds</h2>');
     game.loadQuestion();
 });
 
@@ -135,7 +135,7 @@ var game = {
     results: function () {
         clearInterval(timer);
 
-        panel.html('<h2>All done, heres how you did!</h2>');
+        panel.html('<h2>Final Score: </h2>');
         $('#counter-number').html(game.counter);
         panel.append('<h3>Correct Answers: ' + game.correct + '</h3>');
         panel.append('<h3>Incorrect Answers: ' + game.incorrect + '</h3>');
@@ -174,6 +174,7 @@ var game = {
             setTimeout(game.results, 3 * 1000);
         } else {
             setTimeout(game.nextQuestion, 3 * 1000);
+            
         }
     },
     reset: function () {
